@@ -80,6 +80,6 @@ class DQNAgent:
             loss.backward()
             self.optimizer.step()
 
-        # Zmniejszamy losowość z każdym treningiem
+    def decay_epsilon(self):
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
