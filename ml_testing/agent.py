@@ -34,7 +34,7 @@ class DQNAgent:
         self.gamma = 0.95    # Współczynnik dyskontowania (jak bardzo zależy mu na przyszłości)
         self.epsilon = 1.0   # Eksploracja (na początku 100% losowych akcji)
         self.epsilon_min = 0.05
-        self.epsilon_decay = 0.995
+        self.epsilon_decay = 0.997
 
     def act(self, state):
         # Strategia Epsilon-Greedy: czasem eksplorujemy (losowo), czasem eksploatujemy (sieć)
