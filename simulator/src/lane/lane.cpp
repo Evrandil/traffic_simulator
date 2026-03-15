@@ -9,7 +9,7 @@ lane::lane()	{
 	printf("Lane created!\n");
 }
 lane::~lane()	{
-	printf("Deleting line, amount of cars to delete:\t%d\n", size);
+	printf("Deleting line, amount of cars to delete:\t%ld\n", size);
 	if	(0 == size)	goto lane_finish;
 	while	(1 != size)	{
 		vehicle *nextHead = head->next;

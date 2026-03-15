@@ -4,24 +4,24 @@
 
 intersection::intersection()	{
 	printf("Intersection created!\n");
-	lights_state = light_state::RED;
+	green_lights_state = green_light_state::UP_AND_DOWN;
 }
 intersection::~intersection()	{
 	printf("Intersection deleted!\n");
 }
-light_state	intersection::GetLightsState()	{
-	return lights_state;
+green_light_state	intersection::GetGreenLightsState()	{
+	return green_lights_state;
 }
-void	intersection::SetLightsState(light_state value)	{
-	lights_state = value;
+void	intersection::SetGreenLightsState(green_light_state value)	{
+	green_lights_state = value;
 }
 void	intersection::ToggleLights()	{
-	switch	(lights_state)	{
-		case light_state::GREEN:
-			lights_state = light_state::RED;
+	switch	(green_lights_state)	{
+		case green_light_state::UP_AND_DOWN:
+			green_lights_state = green_light_state::LEFT_AND_RIGHT;
 			break;
-		case light_state::RED:
-			lights_state = light_state::GREEN;
+		case green_light_state::LEFT_AND_RIGHT:
+			green_lights_state = green_light_state::UP_AND_DOWN;
 			break;
 	}
 }

@@ -4,17 +4,17 @@
 
 
 
-enum light_state	{
-	RED,
-	GREEN,
+enum green_light_state	{
+	UP_AND_DOWN,
+	LEFT_AND_RIGHT,
 };
 
 class intersection	{
-	light_state lights_state;
+	green_light_state green_lights_state;
 	public:
 		intersection();
 		~intersection();
 		void ToggleLights();
-		light_state	GetLightsState();
-		void	SetLightsState(light_state value);
+		green_light_state	GetGreenLightsState();
+		void	SetGreenLightsState(green_light_state value);
 };

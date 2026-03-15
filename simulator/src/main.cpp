@@ -13,11 +13,11 @@ int main()	{
 	delete pas;
 
 	intersection *intersect = new intersection;
-	printf("%d\n", intersect->GetLightsState());
+	printf("%d\n", intersect->GetGreenLightsState());
 	intersect->ToggleLights();
-	printf("%d\n", intersect->GetLightsState());
-	intersect->SetLightsState(light_state::RED);
-	printf("%d\n", intersect->GetLightsState());
+	printf("%d\n", intersect->GetGreenLightsState());
+	intersect->SetGreenLightsState(green_light_state::UP_AND_DOWN);
+	printf("%d\n", intersect->GetGreenLightsState());
 	delete intersect;
 	return 0;
 }
