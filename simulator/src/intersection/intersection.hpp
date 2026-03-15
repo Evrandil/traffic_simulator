@@ -10,8 +10,8 @@ enum light_state	{
 };
 
 class intersection	{
+	light_state lights_state;
 	public:
-		light_state lights_state;
 		intersection();
 		~intersection();
 		void ToggleLights();
